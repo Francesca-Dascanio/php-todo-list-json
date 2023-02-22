@@ -2,8 +2,8 @@
 :root {
     --my-bg-color: #001632;
     --my-title-color: #6c757d;
-    --my-delete-color: #dc323f;
     --my-button-color: #f5aa1c;
+    --my-light-color: #ffffff; 
 
 }
 
@@ -15,13 +15,11 @@
     color: var(--my-title-color);
 }
 
-.delete-color {
-    background-color: var(--my-delete-color);
+.light-color {
+    color: var(--my-light-color);
 }
 
-.btn-color {
-    color: var(--my-button-color);
-}
+
 
 /* REGOLE GENERALI */
 .external-container {
@@ -35,4 +33,18 @@
 
 .item-done {
     text-decoration: line-through;
+}
+
+.my-btn {
+    color: var(--my-button-color);
+    border: 1px solid var(--my-button-color);
+    border-radius: 0 0.25rem 0.25rem 0;
+
+}
+
+.my-btn:hover {
+    color: var(--my-bg-color);
+    border: 1px solid var(--my-button-color);
+    background-color: var(--my-button-color);
+
 }
