@@ -1,0 +1,34 @@
+/* COLORI */
+:root {
+    --my-bg-color: #001632;
+    --my-title-color: #6c757d;
+    --my-delete-color: #dc323f;
+    --my-button-color: #f5aa1c;
+
+}
+
+.bg-color {
+    background-color: var(--my-bg-color);
+}
+
+.title-color {
+    color: var(--my-title-color);
+}
+
+.delete-color {
+    background-color: var(--my-delete-color);
+}
+
+.btn-color {
+    color: var(--my-button-color);
+}
+
+/* REGOLE GENERALI */
+.external-container {
+    width: 100%;
+    height: 100vh;
+}
+
+.my-font-size {
+    font-size: 5rem;
+}

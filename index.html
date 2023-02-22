@@ -13,11 +13,31 @@
     <body>
 
         <div id="app">
-            <h1>
-                PHP To Do List Json
-            </h1>
-            <div v-for="topic in topics">
-                {{ topic.topic }}
+            <!-- contenitore esterno -->
+            <div class="external-container bg-color">
+                <div class="container-xl">
+                    <div class="row">
+                        <div class="col">
+                            <header>
+                                <h1 class="title-color text-center py-3 my-font-size">
+                                    Todo List
+                                </h1>
+                            </header>
+
+                            <main>
+                                <div class="d-flex justify-content-center">
+                                    <div class="card" style="width: 50rem;">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item" v-for="item in topics">
+                                                {{ item.topic }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </main>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         
