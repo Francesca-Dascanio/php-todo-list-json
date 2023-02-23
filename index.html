@@ -41,18 +41,26 @@
                                     </div>
                                 </div>
                                 <!-- Input -->
-                                <div class="input-group my-3" style="width: 50rem; margin: 0 auto;">
+                                <div>
+                                    {{ input }}
+                                </div>
+                                <form class="input-group my-3" style="width: 50rem; margin: 0 auto;" action="" method="POST" @submit.prevent="addData()">
                                     <input 
+                                    v-model="input"
                                     type="text" 
                                     class="form-control" 
                                     placeholder="Inserisci elemento..." 
                                     aria-label="new-item" 
                                     aria-describedby="button-addon2"
-                                    name="new-item">
-                                    <button class="btn my-btn" type="button" id="button-addon2">
+                                    name="new-item"
+                                    required
+                                    maxlength="20"
+                                    minlength="1"
+                                    />
+                                    <button class="btn my-btn" type="submit" id="button-addon2">
                                         Inserisci
                                     </button>
-                                </div>
+                                </form>
                             </main>
                         </div>
                     </div>
