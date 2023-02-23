@@ -39,7 +39,7 @@ createApp ({
                 this.topics.push(newTopic);
             });
         },
-        updateData: function (item) {
+        updateData: function (item, index) {
 
             // Al click inverti il valore booleano di item.done --> solo frontend così
             if (item.done == true) {
@@ -51,7 +51,8 @@ createApp ({
                 .post('./update.php', 
                 {
                     done: item.done,
-                    topic: item.topic
+                    topic: item.topic,
+                    index: index
                 },
                 {
                     headers: {
@@ -72,7 +73,8 @@ createApp ({
                 .post('./update.php', 
                 {
                     done: item.done,
-                    topic: item.topic
+                    topic: item.topic,
+                    index: index
                 },
                 {
                     headers: {
