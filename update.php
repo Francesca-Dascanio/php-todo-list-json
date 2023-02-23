@@ -9,9 +9,10 @@ var_dump($topicsDecoded);
 
 // Salva in php la modifica del dato "done"
 $singleTopic = [
-    "topic" => 'topic',
+    "topic" => "topic",
     "done" => 'done'
 ];
+var_dump($singleTopic);
 
 $index = 'index';
 

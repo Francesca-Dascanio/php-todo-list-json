@@ -50,7 +50,7 @@ createApp ({
                 axios
                 .post('./update.php', 
                 {
-                    done: item.done,
+                    done: false,
                     topic: item.topic,
                     index: index
                 },
@@ -62,7 +62,7 @@ createApp ({
                 .then((response) => {
 
                     console.log(response);
-
+                    return item;
                 });
             }
             else {
@@ -72,7 +72,7 @@ createApp ({
                 axios
                 .post('./update.php', 
                 {
-                    done: item.done,
+                    done: true,
                     topic: item.topic,
                     index: index
                 },
@@ -84,7 +84,7 @@ createApp ({
                 .then((response) => {
 
                     console.log(response);
-
+                    return item;
                 });
             }
             
