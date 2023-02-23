@@ -6,21 +6,26 @@ createApp ({
             // miei dati
             message: 'Tutto ok',
             topics: [],
-            newTopic: {
-                topic: '',
-                done: false
-            },
             myInput: '',
         }
     },
     methods: {
         addData: function () {
+
+            const newTopic = {
+                topic: this.myInput,
+                done: false
+            };
+
             // Chiamata axios per inviare dati al backend
             axios
             .post('./add.php', 
             {
                 // data
-                topic: this.newTopic
+            
+                topic: newTopic
+
+                
             },
             {
                 headers: {
@@ -31,7 +36,7 @@ createApp ({
                 // Cosa deve rispondere: array dei topics dove viene pushato il nuovo dato topic - lato frontend
                 console.log(response);
 
-                this.topics.push(this.newTopic);
+                this.topics.push(newTopic);
             });
         }
     },
