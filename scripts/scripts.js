@@ -6,11 +6,11 @@ createApp ({
             // miei dati
             message: 'Tutto ok',
             topics: [],
-            input: null,
             newTopic: {
                 topic: '',
                 done: false
-            }
+            },
+            myInput: '',
         }
     },
     methods: {
@@ -27,8 +27,10 @@ createApp ({
                     'Content-Type': 'multipart/form-data'
                 }
             })
-            .post((response) => {
+            .then((response) => {
                 // Cosa deve rispondere: array dei topics dove viene pushato il nuovo dato topic - lato frontend
+                console.log(response);
+
                 this.topics.push(this.newTopic);
             });
         }

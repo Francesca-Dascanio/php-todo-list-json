@@ -42,11 +42,11 @@
                                 </div>
                                 <!-- Input -->
                                 <div>
-                                    {{ input }}
+                                    {{ myInput }}
                                 </div>
-                                <form class="input-group my-3" style="width: 50rem; margin: 0 auto;" action="" method="POST" @submit.prevent="addData()">
+                                <form class="input-group my-3" style="width: 50rem; margin: 0 auto;" action="add.php" method="POST" @submit.prevent="addData()">
                                     <input 
-                                    v-model="input"
+                                    v-model="myInput"
                                     type="text" 
                                     class="form-control" 
                                     placeholder="Inserisci elemento..." 
