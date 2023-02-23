@@ -29,8 +29,8 @@
                                 <div class="d-flex justify-content-center">
                                     <div class="card" style="width: 50rem;">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex justify-content-between" v-for="item in topics">
-                                                <span :class="item.done == true ? 'item-done' : ''">
+                                            <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in topics">
+                                                <span :class="item.done == true ? 'item-done' : ''" @click="updateData(item)">
                                                     {{ item.topic }}
                                                 </span>
                                                 <button type="button" class="btn btn-danger">

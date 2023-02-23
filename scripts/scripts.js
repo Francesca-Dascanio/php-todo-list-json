@@ -38,6 +38,54 @@ createApp ({
 
                 this.topics.push(newTopic);
             });
+        },
+        updateData: function (item) {
+
+            // Al click inverti il valore booleano di item.done --> solo frontend così
+            if (item.done == true) {
+                
+                item.done = false;
+
+                // Chiamata axios per inviare dato modificato al backend
+                axios
+                .post('./update.php', 
+                {
+                    done: item.done,
+                    topic: item.topic
+                },
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then((response) => {
+
+                    console.log(response);
+
+                });
+            }
+            else {
+                item.done = true;
+
+                // Chiamata axios per inviare dato modificato al backend
+                axios
+                .post('./update.php', 
+                {
+                    done: item.done,
+                    topic: item.topic
+                },
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then((response) => {
+
+                    console.log(response);
+
+                });
+            }
+            
         }
     },
     created () {

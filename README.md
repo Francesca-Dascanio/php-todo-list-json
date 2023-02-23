@@ -24,7 +24,7 @@ Descrizione
 Partendo dall'esercizio di ieri, aggiungiamo la possibilità di scrivere nella lista di Todo.
 Creare un apposito form in cui è possibile aggiungere il testo di un nuovo task. OK
 La sottomissione del form verrà inviata ad una nuova pagina che si occuperà di salvare il nuovo task nella lista dei Todo.
-Estendiamo la gestione della persistenza dei dati scrivendo le modifiche nel file JSON utilizzato ieri.
+Estendiamo la gestione della persistenza dei dati scrivendo le modifiche nel file JSON utilizzato ieri. OK
 
 Consigli
 Anche oggi, nello svolgere l'esercizio seguite un approccio graduale.
