@@ -46,13 +46,19 @@ createApp ({
                 
                 item.done = false;
 
+                const updatedTopic = {
+                    topic: item.topic,
+                    done: item.done
+                };
+
                 // Chiamata axios per inviare dato modificato al backend
                 axios
                 .post('./update.php', 
                 {
-                    done: false,
-                    topic: item.topic,
-                    index: index
+                    // done: false,
+                    // topic: item.topic,
+                    // index: index
+                    update: updatedTopic
                 },
                 {
                     headers: {
@@ -62,7 +68,7 @@ createApp ({
                 .then((response) => {
 
                     console.log(response);
-                    return item;
+                    return updatedTopic;
                 });
             }
             else {
