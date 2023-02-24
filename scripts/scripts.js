@@ -23,8 +23,8 @@ createApp ({
             {
                 // data
             
-                topic: newTopic
-
+                // topic: newTopic
+                topic: this.myInput
                 
             },
             {
