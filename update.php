@@ -10,7 +10,8 @@ $topicsDecoded = json_decode($topics, true);
 // Salva in php il topic modificato
 $updatedTopic = [
     "topic" => $_POST['topic'],
-    "done" => $_POST['done']
+    "done" => $_POST['done'],
+    "deleted" => false
 ];
 
 

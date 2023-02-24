@@ -29,11 +29,11 @@
                                 <div class="d-flex justify-content-center">
                                     <div class="card" style="width: 50rem;">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item justify-content-between" :class="item == false ? 'item-gone' : 'd-flex'" v-for="(item, index) in topics">
+                                            <li class="list-group-item justify-content-between" :class="item.deleted == true ? 'd-none' : 'd-flex'" v-for="(item, index) in topics">
                                                 <span :class="item.done == true ? 'item-done' : ''" @click="updateData(item, index)">
                                                     {{ item.topic }}
                                                 </span>
-                                                <button type="button" class="btn btn-danger" @click="deleteData(index)">
+                                                <button type="button" class="btn btn-danger" @click="deleteData(item, index)">
                                                     <i class="fa-solid fa-trash"></i>
                                                 </button>
                                             </li>
@@ -44,7 +44,7 @@
                                 <div>
                                     {{ myInput }}
                                 </div>
-                                <form class="input-group my-3" style="width: 50rem; margin: 0 auto;" action="add.php" method="POST" @submit.prevent="addData()">
+                                <form class="input-group my-3" style="width: 50rem; margin: 0 auto;" action="add.php" method="POST" @submit.prevent="addData(item)">
                                     <input 
                                     v-model="myInput"
                                     type="text" 

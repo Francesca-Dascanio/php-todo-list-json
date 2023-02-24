@@ -11,7 +11,8 @@ $topicsDecoded = json_decode($topics, true);
 // Salva in php il nuovo topic inserito dall'utente
 $newTopic = [
     "topic" => $_POST['topic'],
-    "done" => false
+    "done" => false,
+    "deleted" => false
 ];
 
 // Aggiungi all'array attuale topicsDecoded il nuovo topic 

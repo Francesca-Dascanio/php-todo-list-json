@@ -22,9 +22,13 @@
 
 
 /* REGOLE GENERALI */
+#app {
+    height: 100vh;
+}
+
 .external-container {
     width: 100%;
-    /* height: 100vh; */
+    height: 100vh;
 }
 
 .my-font-size {

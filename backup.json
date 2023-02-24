@@ -1,27 +1,33 @@
 {
     "1": {
         "topic": "HTML",
-        "done": false
+        "done": false,
+        "deleted": false
     },
     "2": {
         "topic": "CSS",
-        "done": true
+        "done": true,
+        "deleted": false
     },
     "3": {
         "topic": "Responsive Design",
-        "done": true
+        "done": true,
+        "deleted": false
     },
     "4": {
         "topic": "Javascript",
-        "done": false
+        "done": false,
+        "deleted": false
     },
     "5": {
         "topic": "PHP",
-        "done": false
+        "done": false,
+        "deleted": false
     },
     "6": {
         "topic": "Laravel",
-        "done": false
+        "done": false,
+        "deleted": false
     }
     
 }

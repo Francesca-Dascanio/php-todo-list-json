@@ -10,7 +10,7 @@ createApp ({
         }
     },
     methods: {
-        addData: function () {
+        addData: function (item) {
 
             const newTopic = {
                 topic: this.myInput,
@@ -36,7 +36,9 @@ createApp ({
                 // Cosa deve rispondere: array dei topics dove viene pushato il nuovo dato topic - lato frontend
                 console.log(response);
 
-                this.topics.push(newTopic);
+                // this.topics.push(newTopic);
+
+                return item;
             });
         },
         updateData: function (item, index) {
@@ -90,28 +92,29 @@ createApp ({
             }
             
         },
-        deleteData: function (index, item) {
+        deleteData: function (item, index) {
             console.log('sono dentro a deleteData');
+            console.log(item.topic, item.deleted);
 
-            item = false;
+            item.deleted = true;
             
             // Chiamata axios per inviare dato index
-            // axios
-            //     .post('./delete.php', 
-            //     {
-            //         index: index,
-            //         item: item
-            //     },
-            //     {
-            //         headers: {
-            //             'Content-Type': 'multipart/form-data'
-            //         }
-            //     })
-            //     .then((response) => {
+            axios
+                .post('./delete.php', 
+                {
+                    index: index,
+                    item: item
+                },
+                {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                })
+                .then((response) => {
                     
-            //         return item = false;
+                    return item;
                     
-            //     });
+                });
         }
     },
     created () {
