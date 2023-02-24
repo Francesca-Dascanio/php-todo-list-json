@@ -23,6 +23,7 @@ var_dump($topicsDecoded);
 
 $topicsEncoded = json_encode($topicsDecoded);
 
+// Salva in file database.json
 file_put_contents('database.json', $topicsEncoded);
 
 header('Content-Type: application/json');

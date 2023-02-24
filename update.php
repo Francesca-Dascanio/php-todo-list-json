@@ -7,26 +7,35 @@ $topics = file_get_contents('database.json');
 $topicsDecoded = json_decode($topics, true);
 
 
-// Salva in php la modifica del dato "done" --> come passare dato a php? così legge string
-$singleTopic = 'update';
-var_dump($singleTopic);
+// Salva in php il topic modificato
+$updatedTopic = [
+    "topic" => $_POST['topic'],
+    "done" => $_POST['done']
+];
+
+
+// Sostituisci all'array attuale il topic modificato senza far scomparire tutto il resto del database
+if (isset($topicsDecoded[$_POST['index']])) {
+    $topicsDecoded[$_POST['index']] = $updatedTopic;
+    // var_dump($topicsDecoded);
+}
+else {
+    // Non fare nulla
+}
+
+
+var_dump($topicsDecoded);
+
+// Converti l'array a cui è stato aggiunto il nuovo elemento in json
+$topicsEncoded = json_encode($topicsDecoded);
+
+// Salva in file database.json
+file_put_contents('database.json', $topicsEncoded);
 
 header('Content-Type: application/json');
 
-$singleTopicEnc = json_encode($singleTopic);
 
-echo $singleTopicEnc;
+echo $topicsEncoded;
 
-// Modifica all'array attuale il dato done modificato
-// ??? come faccio a non sovrascrivere miei dati precedenti?
-// $topicsDecoded[$index] = $singleTopic;
-
-// Qui non devo rimettere header('Content-Type: application/json'); ?
-// Converti l'array a cui è stato aggiunto il nuovo elemento in json
-// header('Content-Type: application/json');
-
-// $topicsEncoded = json_encode($topicsDecoded[$index]);
-
-// echo $topicsEncoded;
 
 ?>

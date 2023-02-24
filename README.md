@@ -34,3 +34,7 @@ Bonus
 1. Permettere di segnare un task come completato facendo click sul testo
 2. Permettere il toggle del task (completato/non completato)
 3. Abilitare l'eliminazione di un task (modificato) 
+
+****
+beautify json:
+shift  option F
