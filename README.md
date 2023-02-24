@@ -31,9 +31,9 @@ Anche oggi, nello svolgere l'esercizio seguite un approccio graduale.
 "Testare" l'invio di un nuovo task prima di memorizzare i dati nel file JSON.
 
 Bonus
-1. Permettere di segnare un task come completato facendo click sul testo
+1. Permettere di segnare un task come completato facendo click sul testo OK
 2. Permettere il toggle del task (completato/non completato)
-3. Abilitare l'eliminazione di un task (modificato) 
+3. Abilitare l'eliminazione di un task  
 
 ****
 beautify json:

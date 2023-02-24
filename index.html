@@ -29,11 +29,11 @@
                                 <div class="d-flex justify-content-center">
                                     <div class="card" style="width: 50rem;">
                                         <ul class="list-group list-group-flush">
-                                            <li class="list-group-item d-flex justify-content-between" v-for="(item, index) in topics">
+                                            <li class="list-group-item justify-content-between" :class="item == false ? 'item-gone' : 'd-flex'" v-for="(item, index) in topics">
                                                 <span :class="item.done == true ? 'item-done' : ''" @click="updateData(item, index)">
                                                     {{ item.topic }}
                                                 </span>
-                                                <button type="button" class="btn btn-danger">
+                                                <button type="button" class="btn btn-danger" @click="deleteData(index)">
                                                     <i class="fa-solid fa-trash"></i>
                                                 </button>
                                             </li>

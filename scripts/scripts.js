@@ -89,6 +89,29 @@ createApp ({
                 });
             }
             
+        },
+        deleteData: function (index, item) {
+            console.log('sono dentro a deleteData');
+
+            item = false;
+            
+            // Chiamata axios per inviare dato index
+            // axios
+            //     .post('./delete.php', 
+            //     {
+            //         index: index,
+            //         item: item
+            //     },
+            //     {
+            //         headers: {
+            //             'Content-Type': 'multipart/form-data'
+            //         }
+            //     })
+            //     .then((response) => {
+                    
+            //         return item = false;
+                    
+            //     });
         }
     },
     created () {
