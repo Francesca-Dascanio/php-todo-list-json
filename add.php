@@ -23,7 +23,7 @@ var_dump($topicsDecoded);
 
 $topicsEncoded = json_encode($topicsDecoded);
 
-file_put_contents('.database.json', $topicsEncoded);
+file_put_contents('database.json', $topicsEncoded);
 
 header('Content-Type: application/json');
 
